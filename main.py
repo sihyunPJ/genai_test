@@ -2,12 +2,17 @@ import os
 import json
 from pathlib import Path
 import openai
-BASE_DIR = Path().resolve()
+# BASE_DIR = Path().resolve()
 
-with open(BASE_DIR/'secrets.json') as f:
-    secrets = json.loads(f.read())
+# with open(BASE_DIR/'secrets.json') as f:
+#     secrets = json.loads(f.read())
     
-SECRET_KEY = secrets['openai_key']
+from dotenv import load_dotenv
+
+# .env 파일 활성화
+load_dotenv()
+
+SECRET_KEY = os.getenv('OPENAI_KEY')
 
 def gen(x):
   gpt_prompt = [{
