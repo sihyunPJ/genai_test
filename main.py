@@ -229,4 +229,4 @@ demo = gr.TabbedInterface([t2i_generator_tab, i2i_generator_tab], ["Text to Imag
 
 
 if __name__ == "__main__":
-    demo.launch(debug=True, share=True)
+    demo.launch(debug=True, share=True, server_port=22)
