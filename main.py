@@ -232,4 +232,4 @@ demo = t2i_generator_tab
 
 
 if __name__ == "__main__":
-    demo.launch(debug=True, share=False, server_port=7860)
+    demo.launch(debug=True, share=False, server_name="0.0.0.0", server_port=7860)
